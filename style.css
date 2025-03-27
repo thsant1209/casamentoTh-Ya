@@ -179,44 +179,46 @@ body {
 }
 
 
-.secao h3 {
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
+/* Estilo simples e decorativo sem fundo */
+#presentes > h3 {
+    font-family: 'Georgia', serif;
     font-size: 1.2rem;
-    line-height: 1.8;
-    color: #5a4a3a; /* Cor terrosa sofisticada */
+    line-height: 1.7;
+    color: #5a4a3a; /* Cor terrosa */
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    padding: 0 20px;
     position: relative;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    background: url('img/floral-divider-top.png') no-repeat center top,
-    url('img/floral-divider-bottom.png') no-repeat center bottom;
-background-size: 150px auto;
-padding-top: 50px;
-padding-bottom: 50px;
+    font-weight: normal;
+    font-style: italic;
 }
 
-.secao h3::before,
-.secao h3::after {
+/* Linhas decorativas finas */
+#presentes > h3::before,
+#presentes > h3::after {
     content: "";
     display: block;
     width: 100px;
     height: 1px;
-    background: #d4b483; /* Cor dourada */
+    background: linear-gradient(to right, transparent, #d4b483, transparent);
     margin: 20px auto;
 }
 
-/* Para dispositivos móveis */
+/* Versão mobile */
 @media (max-width: 768px) {
-    .secao h3 {
+    #presentes > h3 {
         font-size: 1rem;
-        padding: 15px;
-        margin-bottom: 30px;
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+    
+    #presentes > h3::before,
+    #presentes > h3::after {
+        width: 60px;
+        margin: 15px auto;
     }
 }
-
 /* Informações */
 .info-content {
     display: flex;
