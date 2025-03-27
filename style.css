@@ -118,7 +118,8 @@ body {
     }
 }
 
-
+/* Restante do seu CSS permanece igual */
+/* ... */
 /* Menu de Navegação */
 .menu {
     background: linear-gradient(90deg, var(--tiffany), var(--fuchsia));
@@ -177,7 +178,7 @@ body {
     margin: 10px auto 0;
 }
 
-
+/* Adicione isso ao seu arquivo style.css */
 /* Estilo simples e decorativo sem fundo */
 #presentes > h3 {
     font-family: 'Georgia', serif;
@@ -218,6 +219,7 @@ body {
         margin: 15px auto;
     }
 }
+
 /* Informações */
 .info-content {
     display: flex;
@@ -742,4 +744,218 @@ footer {
     border-radius: 5px;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Contagem Regressiva */
+.contagem-regressiva {
+    background: linear-gradient(90deg, var(--tiffany), var(--fuchsia));
+    color: var(--branco);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contagem-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contagem-regressiva h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--branco);
+}
+
+.contagem-timer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contagem-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 120px;
+    backdrop-filter: blur(5px);
+}
+
+.contagem-item span:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contagem-item span:last-child {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .contagem-item {
+        min-width: 80px;
+        padding: 15px 10px;
+    }
+    
+    .contagem-item span:first-child {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para a seção de contagem regressiva */
+.secao-contagem {
+    background: linear-gradient(135deg, var(--tiffany), var(--fuchsia));
+    color: var(--branco);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contagem-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--branco);
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.timer-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 120px;
+    backdrop-filter: blur(5px);
+}
+
+.timer-item span:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timer-item span:last-child {
+    font-size: 1.2rem;
+}
+
+/* Estilos para a seção da história */
+.historia {
+    background-color: var(--branco);
+}
+
+.historia-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.historia-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.historia-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.historia-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.historia-texto h3 {
+    color: var(--fuchsia-dark);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.historia-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--preto);
+}
+
+.historia-imagem {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.historia-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.historia-imagem:hover img {
+    transform: scale(1.05);
+}
+
+.historia-momento {
+    text-align: center;
+    max-width: 700px;
+    margin: 60px auto 0;
+    padding: 30px;
+    background-color: var(--cinza);
+    border-radius: 10px;
+    position: relative;
+}
+
+.historia-momento h3 {
+    font-size: 2rem;
+    color: var(--tiffany-dark);
+    margin-bottom: 20px;
+}
+
+.historia-momento p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.historia-momento .destaque {
+    font-size: 1.4rem;
+    color: var(--fuchsia-dark);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timer-item {
+        min-width: 80px;
+        padding: 15px;
+    }
+    
+    .timer-item span:first-child {
+        font-size: 2rem;
+    }
+    
+    .timer-item span:last-child {
+        font-size: 1rem;
+    }
+    
+    .historia-item, 
+    .historia-item.reverse {
+        flex-direction: column;
+    }
+    
+    .historia-texto, 
+    .historia-imagem {
+        width: 100%;
+    }
+    
+    .historia-texto {
+        margin-bottom: 20px;
+    }
 }
