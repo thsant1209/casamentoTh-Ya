@@ -265,3 +265,35 @@ document.getElementById('confirmacao-form').addEventListener('submit', async fun
     }
   });
   
+  // =============================================
+// CONTAGEM REGRESSIVA
+// =============================================
+function atualizarContagemRegressiva() {
+    const dataCasamento = new Date('October 18, 2025 18:30:00').getTime();
+    const agora = new Date().getTime();
+    const diferenca = dataCasamento - agora;
+
+    // Cálculos para dias, horas, minutos e segundos
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+    // Exibir os resultados
+    document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+    document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+    document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+    document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+
+    // Se a contagem regressiva terminar
+    if (diferenca < 0) {
+        clearInterval(contagemInterval);
+        document.getElementById('contagem-regressiva').innerHTML = '<h2>Hoje é o grande dia!</h2>';
+    }
+}
+
+// Atualizar a contagem regressiva a cada segundo
+const contagemInterval = setInterval(atualizarContagemRegressiva, 1000);
+
+// Executar imediatamente para evitar atraso inicial
+atualizarContagemRegressiva();
